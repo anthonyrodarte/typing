@@ -42,17 +42,17 @@ h1 {
   float: right;
 }
 
-.before {
-  color: inherit;
+.pre {
+  color: rgb(100, 100, 100);
 }
 
 .current {
   text-decoration: underline;
-  color: hsl(200, 0%, 20%);
+  color: rgb(50, 50, 50);
   animation: blink 1s infinite;
 }
 
-.upcoming {
+.next {
   color: inherit;
 }
 
