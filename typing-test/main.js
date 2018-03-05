@@ -1,9 +1,12 @@
 var $prompt = document.querySelector('p.text-prompt')
 var $input = document.querySelector('input.input-text')
 var $feedback = document.querySelector('div.feedback')
+var $errors = document.querySelector('div.errors')
+
+var errors = 0
 
 var promptText = {
-  text: `This is your typing test`,
+  text: `This is your typing test. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.`,
   position: 0,
 }
 
@@ -37,6 +40,8 @@ function checker(userInput, promptSegment) {
   } else {
     $feedback.textContent = ""
     $feedback.textContent = "Wrong!"
+    errors++
+    $errors.textContent = errors
   }
 }
 
