@@ -30,6 +30,7 @@ h1 {
   width: 80%;
   border: 2px solid rgba(91, 129, 218, 1);
   background-color: rgba(255, 255, 255, 0.5);
+  border-style: inset;
   padding-left: 2%;
   color: rgba(91, 129, 218, 1);
   font-family: 'Merriweather', serif;
@@ -54,6 +55,40 @@ h1 {
 
 .next {
   color: inherit;
+}
+
+.input-text {
+  margin-top: 25%;
+  margin-left: 7%;
+  border-color: rgba(91, 129, 218, 1);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(91, 129, 218, 1);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Merriweather', serif;
+  height: 8%;
+  width: 80%;
+  padding-left: 2%;
+}
+
+.incorrect-box {
+  margin-top: 10%;
+  margin-left: 7%;
+  border: 2px solid rgba(91, 129, 218, 1);
+  border-color: rgba(91, 129, 218, 1);
+  border-style: inset;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(91, 129, 218, 1);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Merriweather', serif;
+  height: 80px;
+  width: 80px;
+}
+
+.feedback {
+  margin-top: 35%;
+  margin-left: 10%;
 }
 
 @keyframes blink {

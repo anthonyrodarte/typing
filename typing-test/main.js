@@ -1,7 +1,10 @@
 var $prompt = document.querySelector('p.text-prompt')
+var $input = document.querySelector('input.input-text')
+var $feedback = document.querySelector('div.feedback')
+
 var promptText = {
-  text: `This is your writing test`,
-  position: 4
+  text: `This is your typing test`,
+  position: 0,
 }
 
 function postPrompt(words, location, position) {
@@ -22,5 +25,24 @@ function postPrompt(words, location, position) {
   location.append($pre, $current, $next)
 
 }
+
+function checker(userInput, promptSegment) {
+  if (userInput === promptSegment) {
+    promptText.position++
+    $prompt.textContent = ""
+    postPrompt(promptText, $prompt, promptText.position)
+    $feedback.textContent = ""
+    $feedback.textContent = "Great!"
+
+  } else {
+    $feedback.textContent = ""
+    $feedback.textContent = "Wrong!"
+  }
+}
+
+$input.addEventListener('input', function() {
+  var segment = promptText.text.slice(0, $input.value.length)
+  checker($input.value, segment)
+})
 
 postPrompt(promptText, $prompt, promptText.position)
